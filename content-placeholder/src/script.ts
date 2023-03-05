@@ -1,12 +1,12 @@
-const header = document.getElementById('header')
-const title = document.getElementById('title')
-const excerpt = document.getElementById('excerpt')
-const profile_img = document.getElementById('profile_img')
-const name = document.getElementById('name')
-const date = document.getElementById('date')
+const header = document.getElementById('header') as HTMLDivElement
+const title = document.getElementById('title') as HTMLDivElement
+const excerpt = document.getElementById('excerpt') as HTMLDivElement
+const profile_img = document.getElementById('profile_img') as HTMLDivElement
+const username = document.getElementById('username') as HTMLDivElement
+const date = document.getElementById('date') as HTMLDivElement
 
-const animated_bgs = document.querySelectorAll('.animated-bg')
-const animated_bg_texts = document.querySelectorAll('.animated-bg-text')
+const animated_bgs = document.querySelectorAll('.animated-bg') as NodeListOf<HTMLImageElement>
+const animated_bg_texts = document.querySelectorAll('.animated-bg-text') as NodeListOf<HTMLImageElement>
 
 setTimeout(getData, 2500)
 
@@ -18,7 +18,7 @@ function getData() {
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore perferendis'
   profile_img.innerHTML =
     '<img src="https://randomuser.me/api/portraits/men/45.jpg" alt="" />'
-  name.innerHTML = 'John Doe'
+  username.innerHTML = 'John Doe'
   date.innerHTML = 'Oct 08, 2020'
 
   animated_bgs.forEach((bg) => bg.classList.remove('animated-bg'))
